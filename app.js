@@ -15,7 +15,7 @@ app.use('/api/orders', graphqlHTTP({
     graphiql: true
 }));
 
-mongoose.connect('mongodb://localhost:27017/mycommerce');
+mongoose.connect('mongodb://administrator:fcamara123@ds117849.mlab.com:17849/mcommerce');
 
 app.listen(process.env.PORT, () => {
     console.log('Listening at port', process.env.PORT);
