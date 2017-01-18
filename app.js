@@ -1,4 +1,4 @@
-process.env.PORT     = process.env.PORT || 3000;
+process.env.PORT     = process.env.PORT || 8080;
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 import express from 'express';
@@ -20,3 +20,5 @@ mongoose.connect('mongodb://administrator:fcamara123@ds117849.mlab.com:17849/mco
 app.listen(process.env.PORT, () => {
     console.log('Listening at port', process.env.PORT);
 });
+
+module.exports = app;
