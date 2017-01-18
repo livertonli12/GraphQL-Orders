@@ -1,4 +1,4 @@
-process.env.PORT     = process.env.PORT || 8080;
+process.env.PORT     = process.env.PORT || 3000;
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 import express from 'express';
@@ -17,8 +17,6 @@ app.use('/api/orders', graphqlHTTP({
 
 mongoose.connect('mongodb://administrator:fcamara123@ds117849.mlab.com:17849/mcommerce');
 
-app.listen(process.env.PORT, () => {
-    console.log('Listening at port', process.env.PORT);
-});
+app.listen(process.env.PORT, () => { console.log('API Running'); });
 
 module.exports = app;
