@@ -11,10 +11,12 @@ import getProjection from '../../get-projection';
 import OrderModel from '../../../models/order';
 
 export default { 
-    type: orderType,
+    type: new GraphQLList(orderType),
     args: {},
     resolve (root, params, options) {
+        console.log("Olá");
         const projection = getProjection(options.fieldASTs[0]);
+        console.log(projection);
         return OrderModel.find().select(projection).exec();
     }
 };
