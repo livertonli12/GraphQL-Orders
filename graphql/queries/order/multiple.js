@@ -14,9 +14,7 @@ export default {
     type: new GraphQLList(orderType),
     args: {},
     resolve (root, params, options) {
-        console.log("Olá");
         const projection = getProjection(options.fieldASTs[0]);
-        console.log(projection);
         return OrderModel.find().select(projection).exec();
     }
 };
